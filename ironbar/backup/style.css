@@ -1,0 +1,78 @@
+/*.background{
+background: black;
+}*/
+
+.sliderBattery label, .sliderBright label, .sliderVol label{
+    font-family: horizon;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+.menuBtn{
+    margin-left: 20px;
+    margin-right: 5px;
+}
+
+progressbar {
+    margin-bottom: 10px;
+    margin-left:5px;
+}
+.sliderBright progressbar trough progress{
+    background-color: #0063e1;
+}
+
+.sliderVol progressbar trough progress{
+    background-color: #ff438a;
+}
+
+.sliderBattery progressbar trough progress{
+    background-color: #33d17a;
+}
+
+progressbar trough progress,
+progressbar trough {
+    min-height: 20px;
+}
+
+.sliderBattery progressbar{
+    margin-right: 15px;
+}
+
+
+
+.music, .myTray, .notiInhibit{
+    margin-left: 20px;
+    /*background-color: #232a2d;*/
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: "SF Pro Rounded";
+    font-weight: 600;
+}
+.musicImage{
+    margin-right: 5px;
+}
+.bluetooth, .inhibitor, .noti{
+    margin-left: 15px;
+}
+
+.powerMenu{
+    /*background-color: #141b1e;*/
+    margin-right: 20px;
+    margin-top: 3px;
+}
+
+.clock{
+    font-family: "horizon";
+    font-weight: 900;
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+    font-size: 16px;
+}
+

@@ -1,0 +1,165 @@
+{
+	"name": "topBar",
+	"position": "top",
+	"margin.bottom": 75,
+	"icon_theme": "Küyen",
+	"start": [
+		{
+			"type": "custom",
+			"class": "menuBtn",
+			"bar": [
+				{
+					"type": "image",
+					"src": "/home/prtyksh/.config/ironbar/images/arch.png",
+					"size": 24
+				}
+			],
+			"on_click_left":"/home/prtyksh/.config/rofi/launchers/type-3/launcher.sh"
+		},
+		{
+			"type": "custom",
+			"class": "myTray",
+			"bar":[
+				{
+					"type":"box",
+					"class":"network",
+					"widgets": [
+						{
+							"type":"image",
+							"src":"/home/prtyksh/.config/ironbar/images/{{watch:python /home/prtyksh/.config/ironbar/scripts/networkPy.py}}",
+							"size":20
+						}
+
+					]
+				},
+				{
+					"type":"box",
+					"class":"bluetooth",
+					"widgets":[
+						{
+							"type":"image",
+							"src":"/home/prtyksh/.config/ironbar/images/{{watch:python /home/prtyksh/.config/ironbar/scripts/bluePy.py}}",
+							"size": 16
+						}
+					]
+				},
+				{
+					"type":"box",
+					"class":"noti",
+					"widgets": [
+						{
+							"type":"image",
+							"src": "/home/prtyksh/.config/ironbar/images/bell.svg",
+							"size": 18
+						}
+					],
+					"on_click_left":"swaync-client --reload-config && swaync-client -rs && swaync-client -t"
+				},
+				{
+					"type":"box",
+					"class":"inhibitor",
+					"widgets":[
+						{
+							"type":"image",
+							"src":"/home/prtyksh/.config/ironbar/images/{{watch:/home/prtyksh/.config/ironbar/scripts/sleepInhibit.bash}}",
+							"size": 20
+						}
+					],
+					"on_click_left": "/home/prtyksh/.config/ironbar/scripts/inhibitToggle.sh"
+				}
+			]
+		},
+		{
+			"type": "custom",
+			"class": "music",
+			"on_click_left": "playerctl play-pause",
+			"on_scroll_up": "playerctl next",
+			"on_scroll_down": "playerctl previous",
+			"bar": [
+				{
+					"type": "image",
+					"src": "/home/prtyksh/.config/ironbar/images/spotify.svg",
+					"size": 24,
+					"class": "musicImage"
+				},
+				{
+					"type": "script",
+					"cmd": "/home/prtyksh/.config/ironbar/scripts/spotMon.sh",
+					"mode": "watch",
+					"class": "musicText"
+				}
+			]
+		}
+	],
+	"center": [
+		{
+			"type": "clock",
+			"format": "%I:%M %p"
+		}
+	],
+	"end": [
+		{
+			"type": "custom",
+			"class": "sliderBright",
+			"bar": [
+				{
+					"type": "label",
+					"label": "{{watch:python /home/prtyksh/.config/ironbar/scripts/brightPy.py}}%"
+				},
+				{
+					"type": "progress",
+					"value": "watch:python /home/prtyksh/.config/ironbar/scripts/brightPy.py",
+					"length": 50
+				}
+			],
+			"on_scroll_down": "brightnessctl set 5%-",
+			"on_scroll_up": "brightnessctl set +5%"
+		},
+		{
+			"type": "custom",
+			"class": "sliderVol",
+			"bar": [
+				{
+					"type": "label",
+					"label": "{{watch:python /home/prtyksh/.config/ironbar/scripts/volumePy.py}}%"
+				},
+				{
+					"type": "progress",
+					"value": "watch:python /home/prtyksh/.config/ironbar/scripts/volumePy.py",
+					"length": 50
+				}
+			],
+			"on_scroll_up": "amixer set Master 3%+",
+			"on_scroll_down": "amixer set Master 3%-"
+		},
+		{
+			"type": "custom",
+			"class": "sliderBattery",
+			"bar": [
+				{
+					"type": "label",
+					"label": "{{watch:python /home/prtyksh/.config/ironbar/scripts/batteryPercent.py}}"
+				},
+				{
+					"type": "progress",
+					"value": "500:acpi -b | grep -P -o '[0-9]+(?=%)'",
+					"length": 50
+				}
+			]
+		},
+		{
+			"type":"custom",
+			"class":"powerMenu",
+			"bar": [
+				{
+					"type": "image",
+					"src": "/home/prtyksh/.config/ironbar/images/fast-arrow-right.svg",
+					"size": 20
+				}
+			],
+			"on_click_left": "/home/prtyksh/.config/rofi/powermenu/type-4/powermenu.sh"
+		}
+
+		
+	]
+}

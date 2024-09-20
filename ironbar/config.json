@@ -1,0 +1,171 @@
+{
+	"position": "bottom",
+	
+	"icon_theme":"boston",
+	"margin.top": 23,
+	"start": [
+		{
+			"type": "workspaces",
+			"class": "workspaces",
+			"name_map": {
+				"3": "🦋",
+				"2": "🌻",
+				"1": "🌈",
+				"4": "🌸",
+				"5": "🍀",
+				"6": "🌷",
+				"7": "🌼",
+				"8": "🪴",
+				"9": "👀",
+				"10": "❄️"
+			},
+			"favorites": [
+				"1",
+				"2",
+				"3",
+				"4",
+				"5"
+			]
+		},
+		
+		
+		{
+			"type": "music",
+			"class": "music",
+			"format": "{title}",
+			"icons.play": "💁‍♀️",
+			"icons.pause": "🙅‍♀️"
+		}
+	],
+	"end": [
+		{
+			"type": "custom",
+			"class":"inhibitor",
+			"bar": [
+				{
+					"type":"box",
+
+					"widgets":[
+						{
+							"type":"image",
+							"src":"/home/prtyksh/.config/ironbar/images/{{watch:/home/prtyksh/.config/ironbar/backup/scripts/sleepInhibit.bash}}",
+							"size": 20
+						}
+					],
+					"on_click_left": "/home/prtyksh/.config/ironbar/backup/scripts/inhibitToggle.sh"
+				}
+			]
+		},
+		{
+			"type": "label",
+			"label": "󰃚",
+			"class": "seperator"
+		},
+		{
+			"type": "custom",
+			"class": "volume",
+			"bar": [
+				
+				{
+					"type": "image",
+					"src": "/home/prtyksh/.config/ironbar/images/{{watch: /home/prtyksh/.config/ironbar/backup/scripts/volumeIcon.sh}}",
+					"size": 18,
+					"class": "logo"
+				},
+				{
+					"type": "label",
+					"label": "{{watch:python /home/prtyksh/.config/ironbar/backup/scripts/volumePy.py}}%"
+				}
+			],
+			"on_scroll_up": "amixer set Master 3%+",
+			"on_scroll_down": "amixer set Master 3%-"
+		},
+		
+		{
+			"type": "label",
+			"label": "󰃚",
+			"class": "seperator"
+		},
+		
+		{
+			"type": "custom",
+			"class": "brightness",
+			"bar": [
+				
+				{
+					"type": "image",
+					"src": "/home/prtyksh/.config/ironbar/images/{{watch: /home/prtyksh/.config/ironbar/backup/scripts/brightLogo.sh}}",
+					"size": 20,
+					"class": "logo"
+				},
+				{
+					"type": "label",
+					"label": "{{watch:python /home/prtyksh/.config/ironbar/backup/scripts/brightPy.py}}%"
+				}
+			],
+			"on_scroll_up": "brightnessctl set +5%",
+			"on_scroll_down": "brightnessctl set 5%-"
+		},
+		
+		{
+			"type": "label",
+			"label": "󰃚",
+			"class": "seperator"
+		},
+		
+
+		{
+			"type": "custom",
+			"class": "battery",
+			"bar": [
+				
+				{
+					"type": "image",
+					"src": "/home/prtyksh/.config/ironbar/images/{{watch: /home/prtyksh/.config/ironbar/backup/scripts/batteryLogo.sh}}",
+					"size": 32,
+					"class": "logo"
+				},
+				{
+					"type": "label",
+					"label": "{{watch:python /home/prtyksh/.config/ironbar/backup/scripts/batteryPercent.py}}"
+				}
+			]
+		},
+		
+		{
+			"type": "label",
+			"label": "󰃚",
+			"class": "seperator"
+		},
+		
+		{
+			"type": "custom",
+			"class": "clock",
+			"bar": [
+				
+				{
+					"type": "image",
+					"src": "/home/prtyksh/.config/ironbar/images/clock-12.svg",
+					"size": 20,
+					"class": "logo"
+				},
+				{
+					"type": "label",
+					"label": " {{poll:60000:date +'%A %e %b %H:%M'}}"
+				}
+			]
+		},
+		
+		{
+			"type": "label",
+			"label": "󰃚",
+			"class": "seperator"
+		},
+		
+
+		
+		{
+			"type": "tray"
+		}
+	]
+}
