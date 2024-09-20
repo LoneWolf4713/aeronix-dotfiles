@@ -16,7 +16,7 @@ Hence the name Aeronix.
  - **Fonts:** [Iosevka Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Iosevka.zip)
  - **Cursor:** [Phinger Cursors](https://github.com/phisch/phinger-cursors)
  - **Icons:** [Kuyen Icons](https://github.com/fabianalexisinostroza/Kuyen-icons)
- - **Launcher / Emoji Menu / Power Menu: ** [Ulauncher](https://ulauncher.io/)
+ - **Launcher / Emoji Menu / Power Menu:** [Ulauncher](https://ulauncher.io/)
  - **Bar:** [Ironbar](https://github.com/JakeStanger/ironbar)
  - **Notifications:** [Wired-Notify](https://github.com/Toqozz/wired-notify)
  - **Volume / Brightness Indicator:** [Avizo](https://github.com/heyjuvi/avizo)
